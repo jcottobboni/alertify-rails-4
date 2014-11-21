@@ -1,5 +1,5 @@
 module AlertifyHelper
-  ALERT_TYPES = [:error, :info, :success, :warning] unless const_defined?(:ALERT_TYPES)
+  ALERT_TYPES = ['error', 'info', 'success', 'warning'] unless const_defined?(:ALERT_TYPES)
 
   def alertify_flash
     jsReturn = javascript_tag()
@@ -7,8 +7,8 @@ module AlertifyHelper
       # Skip empty messages, e.g. for devise messages set to nothing in a locale file.
       next if message.blank?
       
-      type = :success if type == :notice
-      type = :error   if type == :alert
+      type = 'success' if type == 'notice'
+      type = 'error'   if type == 'alert'
       next unless ALERT_TYPES.include?(type)
 
       js_alertify = ""
