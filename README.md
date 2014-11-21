@@ -33,6 +33,11 @@ In order to get the CSS, add the following line to `app/assets/stylesheets/appli
  *= require alertify
  */
 ```
+In your application.html.erb
+```ruby
+<%=alertify_flash%>
+```
+
 
 ## Contributing
 
